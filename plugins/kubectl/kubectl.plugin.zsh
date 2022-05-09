@@ -22,7 +22,7 @@ alias kaf='kubectl apply -f'
 # Drop into an interactive terminal on a container
 alias keti='kubectl exec -t -i'
 
-# Manage configuration quickly to switch contexts between local, dev ad staging.
+# Manage configuration quickly to switch contexts between local, dev and staging
 alias kcuc='kubectl config use-context'
 alias kcsc='kubectl config set-context'
 alias kcdc='kubectl config delete-context'
@@ -35,7 +35,7 @@ alias kcgc='kubectl config get-contexts'
 alias kdel='kubectl delete'
 alias kdelf='kubectl delete -f'
 
-# Pod management.
+# Pod management
 alias kgp='kubectl get pods'
 alias kgpa='kubectl get pods --all-namespaces'
 alias kgpw='kgp --watch'
@@ -48,10 +48,10 @@ alias kgpall='kubectl get pods --all-namespaces -o wide'
 # get pod by label: kgpl "app=myapp" -n myns
 alias kgpl='kgp -l'
 
-# get pod by namespace: kgpn kube-system"
+# get pod by namespace: kgpn kube-system
 alias kgpn='kgp -n'
 
-# Service management.
+# Service management
 alias kgs='kubectl get svc'
 alias kgsa='kubectl get svc --all-namespaces'
 alias kgsw='kgs --watch'
@@ -87,7 +87,7 @@ alias kgseca='kubectl get secret --all-namespaces'
 alias kdsec='kubectl describe secret'
 alias kdelsec='kubectl delete secret'
 
-# Deployment management.
+# Deployment management
 alias kgd='kubectl get deployment'
 alias kgda='kubectl get deployment --all-namespaces'
 alias kgdw='kgd --watch'
@@ -102,14 +102,14 @@ function kres(){
   kubectl set env $@ REFRESHED_AT=$(date +%Y%m%d%H%M%S)
 }
 
-# Rollout management.
+# Rollout management
 alias kgrs='kubectl get replicaset'
 alias kdrs='kubectl describe replicaset'
 alias kers='kubectl edit replicaset'
 alias krh='kubectl rollout history'
 alias kru='kubectl rollout undo'
 
-# Statefulset management.
+# Statefulset management
 alias kgss='kubectl get statefulset'
 alias kgssa='kubectl get statefulset --all-namespaces'
 alias kgssw='kgss --watch'
@@ -146,7 +146,7 @@ alias keno='kubectl edit node'
 alias kdno='kubectl describe node'
 alias kdelno='kubectl delete node'
 
-# PVC management.
+# PVC management
 alias kgpvc='kubectl get pvc'
 alias kgpvca='kubectl get pvc --all-namespaces'
 alias kgpvcw='kgpvc --watch'
@@ -158,20 +158,20 @@ alias kdelpvc='kubectl delete pvc'
 alias kdsa="kubectl describe sa"
 alias kdelsa="kubectl delete sa"
 
-# DaemonSet management.
+# DaemonSet management
 alias kgds='kubectl get daemonset'
 alias kgdsw='kgds --watch'
 alias keds='kubectl edit daemonset'
 alias kdds='kubectl describe daemonset'
 alias kdelds='kubectl delete daemonset'
 
-# CronJob management.
+# CronJob management
 alias kgcj='kubectl get cronjob'
 alias kecj='kubectl edit cronjob'
 alias kdcj='kubectl describe cronjob'
 alias kdelcj='kubectl delete cronjob'
 
-# Job management.
+# Job management
 alias kgj='kubectl get job'
 alias kej='kubectl edit job'
 alias kdj='kubectl describe job'
